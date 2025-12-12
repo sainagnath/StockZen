@@ -3,7 +3,7 @@ import Link from "next/link"
 import Navitems from "./Navitems"
 import UserDropdown from "./UserDropdown"
 
-function Header() {
+function Header({user}:{user:User}) {
 
     return (
         <header className="sticky top-0 header">
@@ -14,7 +14,7 @@ function Header() {
                 <nav className="hidden sm:block">
                     <Navitems/>
                 </nav>
-                <UserDropdown/>
+                <UserDropdown user={user}/>
             </div>
         </header>
     )
